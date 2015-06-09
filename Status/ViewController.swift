@@ -9,7 +9,7 @@
 import UIKit
 
 // Common error that a method is missing, CMD click and copy over and override required methods
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,8 +19,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.dataSource = self
+        tableView.delegate = self
         
         // TODO: Sample data, remove when getting real data
         
@@ -80,11 +81,25 @@ class ViewController: UIViewController, UITableViewDataSource {
         if let updates = updates {
             var update = updates[indexPath.row]
             cell.updateTableView?.text = update.text
-//            cell.tableView?.text = update.text
+
+            if let user = update.user {
+                cell.updateUsername.text = user.username
+            }
+
+            if let date = update.date {
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "h:mm a" // superset of OP's format
+                let str = dateFormatter.stringFromDate(date)
+                cell.updateDate?.text = str
+            }
         }
         return cell
+        
+        // MARK: - UITableViewDelegate
     }
 }
+
+
 
 
 
