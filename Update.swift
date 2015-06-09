@@ -13,8 +13,4 @@ class Update {
     var user: User?
     var text: String?
     var date: NSDate?
-    
-    
-
-    
 }
