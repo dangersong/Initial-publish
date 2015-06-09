@@ -15,6 +15,8 @@
 		557CDA721B267C9D003A0B4A /* StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CDA711B267C9D003A0B4A /* StatusTests.swift */; };
 		557CDA7C1B268006003A0B4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CDA7B1B268006003A0B4A /* User.swift */; };
 		557CDA7E1B268017003A0B4A /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CDA7D1B268017003A0B4A /* Update.swift */; };
+		557CDA811B26954F003A0B4A /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CDA7F1B26954F003A0B4A /* UpdateTableViewCell.swift */; };
+		557CDA821B26954F003A0B4A /* UpdateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557CDA801B26954F003A0B4A /* UpdateTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		557CDA711B267C9D003A0B4A /* StatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTests.swift; sourceTree = "<group>"; };
 		557CDA7B1B268006003A0B4A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		557CDA7D1B268017003A0B4A /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		557CDA7F1B26954F003A0B4A /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
+		557CDA801B26954F003A0B4A /* UpdateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			children = (
 				557CDA5B1B267C9D003A0B4A /* AppDelegate.swift */,
 				557CDA5D1B267C9D003A0B4A /* ViewController.swift */,
+				557CDA7F1B26954F003A0B4A /* UpdateTableViewCell.swift */,
+				557CDA801B26954F003A0B4A /* UpdateTableViewCell.xib */,
 				557CDA5F1B267C9D003A0B4A /* Main.storyboard */,
 				557CDA621B267C9D003A0B4A /* Images.xcassets */,
 				557CDA641B267C9D003A0B4A /* LaunchScreen.xib */,
@@ -200,6 +206,7 @@
 			files = (
 				557CDA611B267C9D003A0B4A /* Main.storyboard in Resources */,
 				557CDA661B267C9D003A0B4A /* LaunchScreen.xib in Resources */,
+				557CDA821B26954F003A0B4A /* UpdateTableViewCell.xib in Resources */,
 				557CDA631B267C9D003A0B4A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				557CDA5E1B267C9D003A0B4A /* ViewController.swift in Sources */,
+				557CDA811B26954F003A0B4A /* UpdateTableViewCell.swift in Sources */,
 				557CDA5C1B267C9D003A0B4A /* AppDelegate.swift in Sources */,
 				557CDA7E1B268017003A0B4A /* Update.swift in Sources */,
 				557CDA7C1B268006003A0B4A /* User.swift in Sources */,

@@ -64,15 +64,23 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
- 
-        // TODO: Make this cell reuseable
-        // Below is a bad example as we are not reusing cells
-        var cell = UITableViewCell()
+
+        // Grabbing the first item from the array from the xibx
+        var cell = NSBundle.mainBundle().loadNibNamed("UpdateTableViewCell", owner: self, options: nil).first as! UpdateTableViewCell
+        
+//        // TODO: Make this cell reuseable
+//        // Below is a bad example as we are not reusing cells
+//        var cell = UpdateTableViewCell()
+        
+        
+//         Changed this to reference our custom view, UpdateTableViewCell
+//        var cell = UITableViewCell()
         
         // Very often people will call their "if lets" as the very same thing they're looking for
         if let updates = updates {
             var update = updates[indexPath.row]
-            cell.textLabel?.text = update.text
+            cell.updateTableView?.text = update.text
+//            cell.tableView?.text = update.text
         }
         return cell
     }
