@@ -13,6 +13,8 @@
 		557CDA631B267C9D003A0B4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557CDA621B267C9D003A0B4A /* Images.xcassets */; };
 		557CDA661B267C9D003A0B4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557CDA641B267C9D003A0B4A /* LaunchScreen.xib */; };
 		557CDA721B267C9D003A0B4A /* StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CDA711B267C9D003A0B4A /* StatusTests.swift */; };
+		557CDA7C1B268006003A0B4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CDA7B1B268006003A0B4A /* User.swift */; };
+		557CDA7E1B268017003A0B4A /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CDA7D1B268017003A0B4A /* Update.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		557CDA6B1B267C9D003A0B4A /* StatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		557CDA701B267C9D003A0B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		557CDA711B267C9D003A0B4A /* StatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTests.swift; sourceTree = "<group>"; };
+		557CDA7B1B268006003A0B4A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		557CDA7D1B268017003A0B4A /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 		557CDA4D1B267C9D003A0B4A = {
 			isa = PBXGroup;
 			children = (
+				557CDA7B1B268006003A0B4A /* User.swift */,
+				557CDA7D1B268017003A0B4A /* Update.swift */,
 				557CDA581B267C9D003A0B4A /* Status */,
 				557CDA6E1B267C9D003A0B4A /* StatusTests */,
 				557CDA571B267C9D003A0B4A /* Products */,
@@ -214,6 +220,8 @@
 			files = (
 				557CDA5E1B267C9D003A0B4A /* ViewController.swift in Sources */,
 				557CDA5C1B267C9D003A0B4A /* AppDelegate.swift in Sources */,
+				557CDA7E1B268017003A0B4A /* Update.swift in Sources */,
+				557CDA7C1B268006003A0B4A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
