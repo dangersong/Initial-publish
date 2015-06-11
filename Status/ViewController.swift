@@ -9,7 +9,7 @@
 import UIKit
 
 // Common error that a method is missing, CMD click and copy over and override required methods
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,26 +22,45 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         tableView.dataSource = self
         tableView.delegate = self
+
+        let urlString = "htps://rawgit.com/jamescmartinez/Status/master/updates.json"
+        let url = NSURL(string: urlString)
+        let request = NSURLRequest(URL: url!)
+        let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
+
+        // MARK: - NSURLConnectionDelegate
+        func connect(connection: NSURLConnectionDelegate, didRecieveData data: NSData) {
+            println(connection)
+            println(data)
+        }
+//        func connection(connection: NSURLConnectionDelegate, didRecieveData data: NSData) {
+//            println(connection)
+//            println(data)
+//        }
+        
+//        let url = Nsurl("htps://rawgit.com/jamescmartinez/Status/master/updates.json")
+        
+        
         
         // TODO: Sample data, remove when getting real data
         
         // Initialize updates to a brand new array
-        updates = [Update]()
-        
-        var user = User()
-        user.username = "James"
-        user.bio = "Him"
-        user.city = "San Francisco"
-        user.link = "http://somewebsite.com"
-        
-        for var i = 0; i < 100; i++ {
-            var update = Update()
-            update.date = NSDate()
-            update.text = "Hello world! \(i)"
-            update.user = user
-        
-            updates?.append(update)
-        }
+//        updates = [Update]()
+//        
+//        var user = User()
+//        user.username = "James"
+//        user.bio = "Him"
+//        user.city = "San Francisco"
+//        user.link = "http://somewebsite.com"
+//        
+//        for var i = 0; i < 100; i++ {
+//            var update = Update()
+//            update.date = NSDate()
+//            update.text = "Hello world! \(i)"
+//            update.user = user
+//        
+//            updates?.append(update)
+//        }
     }
     
     // MARK: - UITableViewDataSource
