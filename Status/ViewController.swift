@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     // Add array to store updates
-    var updates: [Update]? = [Update]()
+    var updates = [Update]()
     
     
     override func viewDidLoad() {
@@ -31,23 +31,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     // MARK: - UITableViewDataSource
-    // This marker goes until the end of the of the file or another marker
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Typically return a count of something
-        
-        // TODO: Return count of update items
-        if let updatesCount = updates?.count {
-            return updatesCount
-        }
-        
-        // Another option to test for nil
-//        if updates.count != nil {
-//            
-//        }
-
-        // Short circuiting with "return". Exits code block once return line is run.
-        return 0
+        return updates.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -59,26 +44,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        // Below is a bad example as we are not reusing cells
 //        var cell = UpdateTableViewCell()
         
+        var update = updates[indexPath.row]
+        cell.updateTableView?.text = update.text
         
-//         Changed this to reference our custom view, UpdateTableViewCell
-//        var cell = UITableViewCell()
-        
-        // Very often people will call their "if lets" as the very same thing they're looking for
-        if let updates = updates {
-            var update = updates[indexPath.row]
-            cell.updateTableView?.text = update.text
-
-            if let user = update.user {
-                cell.updateUsername.text = user.username
-            }
-
-            if let date = update.date {
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "h:mm a" // superset of OP's format
-                let str = dateFormatter.stringFromDate(date)
-                cell.updateDate?.text = str
-            }
+        if let user = update.user {
+            cell.updateUsername.text = user.username
         }
+        
+        if let date = update.date {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "h:mm a" // superset of OP's format
+            let str = dateFormatter.stringFromDate(date)
+            cell.updateDate?.text = str
+        }
+
         return cell
     }
     
@@ -125,7 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // TODO: convert date integer to NSDate
             update.date = NSDate()
             
-            updates?.append(update)
+            updates.append(update)
         }
         tableView.reloadData()
     }
