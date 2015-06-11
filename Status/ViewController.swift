@@ -28,25 +28,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let request = NSURLRequest(URL: url!)
         let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
         
-        // TODO: Sample data, remove when getting real data
-        
-        // Initialize updates to a brand new array
-//        updates = [Update]()
-//        
-//        var user = User()
-//        user.username = "James"
-//        user.bio = "Him"
-//        user.city = "San Francisco"
-//        user.link = "http://somewebsite.com"
-//        
-//        for var i = 0; i < 100; i++ {
-//            var update = Update()
-//            update.date = NSDate()
-//            update.text = "Hello world! \(i)"
-//            update.user = user
-//        
-//            updates?.append(update)
-//        }
     }
     
     // MARK: - UITableViewDataSource
