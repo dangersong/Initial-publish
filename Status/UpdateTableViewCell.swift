@@ -11,6 +11,4 @@ import UIKit
 class UpdateTableViewCell: UITableViewCell {
     
     @IBOutlet weak var updateTableView: UILabel!
-    @IBOutlet weak var updateUsername: UILabel!
-    @IBOutlet weak var updateDate: UILabel!
 }
