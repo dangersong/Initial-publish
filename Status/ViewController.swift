@@ -109,3 +109,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadData()
     }
 }
+
+
+
+
+
+
+
+
+class SomeClass {
+    func createPlist() {
+        // Get a reference to the Documents Directory with User permissions
+        // For example: /Users/james/Documents
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        // Get the first path (only one Documents Directory)
+        let firstPath = paths.first as! String
+        // Add 'data.plist' onto the Documents Directory path
+        // For example: /Users/james/Documents/data.plist
+        let plistPath = firstPath.stringByAppendingPathComponent("data.plist")
+        // Create a reference to the file manager
+        let fileManager = NSFileManager.defaultManager()
+        // Check to see if the plist exists
+        if !fileManager.fileExistsAtPath(plistPath) {
+            // TODO: create plist
+//        let pleaseSucceed = data.writeToFile(plistPath, atomically: true)
+            // An array converted to an NSArray (an object)
+            let updatesObject = updates as NSArray
+            updatesObject.writeToFile(plistPath, atomically: true)
+            let plistData = NSArray(contentsOfFile: plistPath)
+        }
+        // Write my data to the plist
+        let myData = NSData()
+        myData.writeToFile(plistPath, atomically: true)
+    }
+}
+
+
+
+
+
+
